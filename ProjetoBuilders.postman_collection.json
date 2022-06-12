@@ -1,0 +1,199 @@
+{
+	"info": {
+		"_postman_id": "994677c1-bbc4-4c91-816e-8d6e2dc347a8",
+		"name": "ProjetoBuilders",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "insereCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Antônio Almeida\",\r\n    \"email\": \"henrique_felipe@hotmail.com\",\r\n    \"birthDate\": \"1993-11-17\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/clientes/insereCliente",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"insereCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insereListaClientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    {\r\n        \"name\": \"Fernanda Brazto\",\r\n        \"email\": \"fer-braz@hotmail.com\",\r\n        \"birthDate\": \"1984-07-20\"\r\n    },\r\n    {\r\n        \"name\": \"Felipe Matheus Paz\",\r\n        \"email\": \"felipe.paz@gmail.com\",\r\n        \"birthDate\": \"1986-10-03\"\r\n    },\r\n    {\r\n        \"name\": \"Matheus Peixes\",\r\n        \"email\": \"matheus_peixes@hotmail.com\",\r\n        \"birthDate\": \"1991-04-18\"\r\n    },\r\n    {\r\n        \"name\": \"Henrique Felipe\",\r\n        \"email\": \"henrique_felipe@hotmail.com\",\r\n        \"birthDate\": \"1996-01-01\"\r\n    },\r\n    {\r\n        \"name\": \"Pedro Paulo\",\r\n        \"email\": \"pedro.paulo@hotmail.com\",\r\n        \"birthDate\": \"1999-08-04\"\r\n    },\r\n    {\r\n        \"name\": \"Leonardo Almeida\",\r\n        \"email\": \"leo-almeida@gmail.com\",\r\n        \"birthDate\": \"2000-12-15\"\r\n    },\r\n    {\r\n        \"name\": \"Maria Julia Gomez\",\r\n        \"email\": \"maju.gomez@hotmail.com\",\r\n        \"birthDate\": \"2001-05-09\"\r\n    }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/clientes/insereListaClientes",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"insereListaClientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/clientes/findAll",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"findAll"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:9000/clientes/findById/30",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"findById",
+						"30"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByName",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/clientes/findByName/Maria Julia Gomez",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"findByName",
+						"Maria Julia Gomez"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findByEmail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/clientes/findByEmail/maju.gomez@hotmail.com",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"findByEmail",
+						"maju.gomez@hotmail.com"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateCliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 30,\r\n    \"name\": \"Henrique Budapeste\",\r\n    \"email\": \"henrique_felipe@gmail.com\",\r\n    \"birthDate\": \"1980-12-30\",\r\n    \"createdDate\": \"2022-06-12\",\r\n    \"age\": 41\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9000/clientes/updateCliente",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"updateCliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllPaged",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9000/clientes/findAllPaged/2",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"clientes",
+						"findAllPaged",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
