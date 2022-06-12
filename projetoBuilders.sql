@@ -12,10 +12,8 @@ CREATE SEQUENCE  "CLIENTES_SEQ" MINVALUE 1 MAXVALUE 9999999999999999999999999999
 --grant select, update, insert, delete on CLIENTES to owners;
 
 comment on column CLIENTES.CREATED_DATE
-     IS 'Data de inserção na tabela';
+     IS 'Data de inserÃ§Ã£o na tabela';
 comment on column CLIENTES.CREATED_DATE
      IS 'Data de nascimento do cliente';
      
      SELECT * FROM CLIENTES;
-     
-     DELETE FROM CLIENTES;
